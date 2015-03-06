@@ -12,6 +12,7 @@ angular.module('oracle.controllers', [])
                     scope.$parent.buttonStatus = "Get started";
                     scope.$parent.selectedImageName = element[0].files[0].name;
                     scope.$apply();
+                    scope.$parent.sendToCloudSight(element[0].files[0]);
                 });
             }
         };

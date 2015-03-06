@@ -5,9 +5,9 @@
                 <input ng-hide="selectedImage" type="file" accept="image/*" image="image" resize-max-height="500" resize-max-width="300" resize-quality="0.8" class="custom-file-input" file-model="oracleFile" />
                 <p ng-show="selectedImageName" class="padding-top">You've selected {{selectedImageName}}.</p>
                 <div ng-show="imageReturned" class="col clearfix max-height-300"><img src="{{imageReturned}}" class="col" /></div>
-                <button ng-hide="processing" class="button button-block button-balanced" ng-click="sendToCloudSight(oracleFile)">
+                <!--<button ng-hide="processing" class="button button-block button-balanced" ng-click="sendToCloudSight(oracleFile)">
                     <span>{{buttonStatus}}</span>
-                </button>
+                </button>-->
                 <button ng-show="processing" class="button button-block button-stable">
                     <span>{{progressButtonStatus}}</span>
                 </button>
