@@ -1,0 +1,41 @@
+<ion-view class="text-left" align-title="left" title='<img class="logo" src="http://assets.homeimprovementpages.com.au/css/images/hip/hip_logo.svg" />'>
+    <ion-content class="padding">
+        <div ng-hide="clicked">
+            <form ng-hide="mostRelevant.person">
+                <input ng-hide="selectedImage" type="file" accept="image/*" image="image" resize-max-height="500" resize-max-width="300" resize-quality="0.8" class="custom-file-input" file-model="oracleFile" />
+                <p ng-show="selectedImageName" class="padding-top">You've selected {{selectedImageName}}.</p>
+                <div ng-show="imageReturned" class="col clearfix max-height-300"><img src="{{imageReturned}}" class="col" /></div>
+                <button ng-hide="processing" class="button button-block button-balanced" ng-click="sendToCloudSight(oracleFile)">
+                    <span>{{buttonStatus}}</span>
+                </button>
+                <button ng-show="processing" class="button button-block button-stable">
+                    <span>{{progressButtonStatus}}</span>
+                </button>
+            </form>
+
+            <div ng-show="mostRelevant.person" class="animate-show">
+                <h4 class="normal">We think you need a </h4>
+                <button class="button button-block button-light">
+                    {{mostRelevant.person}}
+                </button>
+                <a class="button button-block button-balanced" href="#" ng-click="callLink(mostRelevant.practice_seo_key)">
+                    Yep, let's go
+                </a>
+                <a ng-click="showSuggestedCategories();" class="calm block text-center">Did I misunderstand you?</a>
+            </div>
+        </div>
+
+        <div ng-show="clicked" class="animate-show">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    Oops! Sorry, I haven't had my morning coffee today. What about these?
+                    <ion-list-item ng-repeat="category in categories">
+                        <button class="button button-block button-balanced" ng-click="callLink(category.practice_seo_key)">{{category.person}}</button>
+                    </ion-list-item>
+                    <a href="#/tab/oracle" class="calm block text-center">Help make me wiser</a>
+                </div>
+            </div>
+            <a ng-click="refreshUpload()" class="calm block text-center">Back</a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view class="text-left" align-title="left" title='<img class="logo" src="http://assets.homeimprovementpages.com.au/css/images/hip/hip_logo.svg" />'>
+    <ion-content class="padding">
+        <div class="padding-horizontal">
+            <form ng-hide="clicked" name="oracle-form">
+                <div class="list list-inset">
+                    <h4 class="normal">I need someone to...</h4>
+                    <label class="item item-input">
+                        <input id="job-string" type="text" name="job-string" placeholder="repair my roof, clean my house etc" ng-model="job_string" />
+                    </label>
+                </div>
+                <button ng-hide="mostRelevant.person" class="button button-block button-balanced" ng-click="classify(job_string)">
+                    Get started
+                </button>
+            </form>
+
+           <div ng-show="mostRelevant.person" class="animate-show padding-top">
+                <h4 class="normal">We think you need a </h4>
+                <button class="button button-block button-light">
+                    {{mostRelevant.person}}
+                </button>
+                <a class="button button-block button-balanced" href="#" ng-click="callLink(mostRelevant.practice_seo_key)">
+                   Yep, let's go
+                </a>
+                <a ng-click="showSuggestedCategories();" class="calm block text-center">Did I misunderstand you?</a>
+           </div>
+
+           <div ng-show="clicked" class="animate-show">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        Oops! Sorry, I haven't had my morning coffee today. What about these?
+                        <ion-list-item ng-repeat="category in categories">
+                            <button class="button button-block button-balanced" ng-click="callLink(category.practice_seo_key)">{{category.person}}</button>
+                        </ion-list-item>
+                    </div>
+                </div>
+               <a ng-click="hideSuggestedCategories();" class="calm block text-center">Back</a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
