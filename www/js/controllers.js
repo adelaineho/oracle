@@ -166,11 +166,9 @@ angular.module('oracle.controllers', [])
         };
 
         $scope.refreshUpload = function() {
-            $state.go('transition', {destination: 'tab.upload'});
         };
 
         $scope.goToOracle = function() {
-            $state.go('transition', {destination: 'tab.oracle'});
         };
 
         $scope.callLink = function(catKey) {

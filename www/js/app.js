@@ -57,13 +57,6 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
           }
       }
   })
-
-  .state('transition', {
-      url: 'transition?destination',
-      controller: function($state, $stateParams){
-          $state.go($stateParam.destination);
-      }
-  })
 /*
   .state('tab.visual', {
       url: '/visual',
