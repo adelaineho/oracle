@@ -3,14 +3,15 @@ angular.module('oracle.services', [])
         return {
             fetchClassified: function(str) {
                 var dataObj = {
-                    classifier_id : 6619,
+                    trained_model_id : 6619,
                     value : str
                 };
                 var req = {
                     method: 'POST',
-                    url: 'https://www.metamind.io/language/classify',
+                    url: 'http://fe6.stg.aws.viteknologies.com.au/oracle.php',
+                    withCredentials: true,
                     headers: {
-                        'Authorization': "Basic nytPC420X70Al0iL2EUgAerhPKty24vsjMiCJCvwV2NQBHK0eN",
+                        'Authorization': "Basic 7zZmxxJNVhLH1ZeuCxu3UHwDxCAE8fQFXWyIzejwnNe9vxLLLC",
                         'Content-Type': "application/json"
                     },
                     data: dataObj

@@ -21,7 +21,7 @@ angular.module('oracle.controllers', [])
     .controller('OracleCtrl', function($scope, $stateParams, classifiedService) {
         $scope.categories = null;
         $scope.mostRelevant = '';
-        $scope.navTitle = '<img class="logo" src="http://assets.homeimprovementpages.com.au/css/images/hip/hip_logo.svg" />';
+        $scope.navTitle = '<img class="logo" src="http://assets.homeimprovementpages.com.au/images/hui/hipages-logo-simple.png" />';
         $scope.classify = function(str) {
             classifiedService.fetchClassified(str).then(function(response) {
                 var result = [];
@@ -172,8 +172,12 @@ angular.module('oracle.controllers', [])
         };
 
         $scope.callLink = function(catKey) {
-            window.open('http://www.homeimprovementpages.com.au/find/'+catKey+'/get_quotes_mobile', '_system', 'location=yes'); return false;
+            window.open('http://www.homeimprovementpages.com.au/find/'+catKey+'/get_quotes_mobile', '_blank'); return false;
         };
+    })
+
+    .controller('VisualCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService) {
+
     })
 
     .controller('ContentController', function($scope, $ionicSideMenuDelegate) {

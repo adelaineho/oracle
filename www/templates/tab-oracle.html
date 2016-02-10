@@ -1,4 +1,4 @@
-<ion-view class="text-left" align-title="left" title='<img class="logo" src="http://assets.homeimprovementpages.com.au/css/images/hip/hip_logo.svg" />'>
+<ion-view class="text-left" align-title="left" title='<img class="logo" src="http://assets.homeimprovementpages.com.au/images/hui/hipages-logo-simple.svg" />'>
     <ion-content class="padding">
         <div class="padding-horizontal">
             <form ng-hide="clicked" name="oracle-form">
@@ -14,14 +14,14 @@
             </form>
 
            <div ng-show="mostRelevant.person" class="animate-show padding-top">
-                <h4 class="normal">We think you need a </h4>
+                <h4 class="normal">You need a </h4>
                 <button class="button button-block button-light">
                     {{mostRelevant.person}}
                 </button>
                 <a class="button button-block button-balanced" href="#" ng-click="callLink(mostRelevant.practice_seo_key)">
                    Yep, let's go
                 </a>
-                <a ng-click="showSuggestedCategories();" class="calm block text-center">Did I misunderstand you?</a>
+                <a ng-click="showSuggestedCategories();" class="calm block text-center">Not what you had in mind?</a>
            </div>
 
            <div ng-show="clicked" class="animate-show">

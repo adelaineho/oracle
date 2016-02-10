@@ -57,7 +57,7 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
           }
       }
   })
-/*
+
   .state('tab.visual', {
       url: '/visual',
       views: {
@@ -66,8 +66,9 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
           controller: 'VisualCtrl'
         }
       }
-    })*/
-    .state('tab.upload', {
+  })
+
+  .state('tab.upload', {
       url: '/upload',
       views: {
         'tab-upload': {
@@ -75,7 +76,7 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
           controller: 'UploadCtrl'
         }
       }
-    });
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/oracle');
