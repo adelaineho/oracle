@@ -8,11 +8,5 @@
   "watchPatterns": [
     "www/**/*",
     "!www/lib/**/*"
-  ],
-  "proxies": [
-      {
-        "path": "/classify",
-        "proxyUrl": "https://www.metamind.io/language/classify"
-      }
-    ]
+  ]
 }

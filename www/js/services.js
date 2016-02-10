@@ -8,7 +8,7 @@ angular.module('oracle.services', [])
                 };
                 var req = {
                     method: 'POST',
-                    url: '/classify',
+                    url: '/service/metamind.php',
                     withCredentials: true,
                     headers: {
                         'Authorization': "Basic 7zZmxxJNVhLH1ZeuCxu3UHwDxCAE8fQFXWyIzejwnNe9vxLLLC",
