@@ -21,7 +21,7 @@ angular.module('oracle.controllers', [])
     .controller('OracleCtrl', function($scope, $stateParams, classifiedService) {
         $scope.categories = null;
         $scope.mostRelevant = '';
-        $scope.navTitle = '<img class="logo" src="http://assets.homeimprovementpages.com.au/images/hui/hipages-logo-simple.png" />';
+        $scope.navTitle = '<img class="logo" src="https://assets.homeimprovementpages.com.au/images/hui/hipages-logo-simple.png" />';
         $scope.classify = function(str) {
             classifiedService.fetchClassified(str).then(function(response) {
                 var result = [];
