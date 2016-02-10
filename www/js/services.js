@@ -8,7 +8,7 @@ angular.module('oracle.services', [])
                 };
                 var req = {
                     method: 'POST',
-                    url: 'http://fe6.stg.aws.viteknologies.com.au/oracle.php',
+                    url: 'http://oracle.hipages.com.au:8080/classify',
                     withCredentials: true,
                     headers: {
                         'Authorization': "Basic 7zZmxxJNVhLH1ZeuCxu3UHwDxCAE8fQFXWyIzejwnNe9vxLLLC",
