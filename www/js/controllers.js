@@ -60,7 +60,7 @@ angular.module('oracle.controllers', [])
         };
 
         $scope.refreshView = function() {
-            $window.location.reload(true);
+            window.location.reload(true);
         };
     })
 
@@ -180,7 +180,7 @@ angular.module('oracle.controllers', [])
         };
 
         $scope.refreshView = function() {
-            $window.location.reload(true);
+            window.location.reload(true);
         };
     })
 

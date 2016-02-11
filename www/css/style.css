@@ -1,46 +1,126 @@
 /* Empty. Add your own CSS if you like */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600); */
 
-body,h1,h2,h3,h4,h5,h6,p,input,button,*{font-family: 'Source Sans Pro', helvetica, arial, sans-serif}
-body,.view-container,.pane,.view,.list-inset{background-color:#eee}
-.bar, .bar .title {height:65px}
-.has-header{top:65px}
-.normal{font-weight:normal}
-#job_string{font-size:1.4em}
-.logo{margin-top:5px;width: 197px;background-position: 0 0;}
-input[type="file"].custom-file-input{color: transparent;width:100%;margin-bottom:0;overflow:hidden;height:50px;margin-top:20px}
-.custom-file-input::-webkit-file-upload-button {
-	visibility: hidden;
+body, h1, h2, h3, h4, h5, h6, p, input, button, * {
+    font-family: 'Source Sans Pro', helvetica, arial, sans-serif
 }
+
+body, .view-container, .pane, .view, .list-inset {
+    background-color: #eee
+}
+
+.bar, .bar .title {
+    height: 65px
+}
+
+.bar.bar-stable.bar-footer {
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    background-image: none;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.has-header {
+    top: 65px
+}
+
+.normal {
+    font-weight: normal
+}
+
+#job_string {
+    font-size: 1.4em
+}
+
+.logo {
+    margin-top: 5px;
+    width: 197px;
+    background-position: 0 0;
+}
+
+input[type="file"].custom-file-input {
+    color: transparent;
+    width: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 50px;
+    margin-top: 20px
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
 input[type="file"].custom-file-input::before {
-	content: 'Upload your photo';
-	color:#fff;
-	display: block;
+    content: 'Upload your photo';
+    color: #fff;
+    display: block;
     background-color: #05c3c7;
-	border-radius: 2px;
-	padding: 7px 12px;
-	width:100%;
-	outline: none;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	cursor: pointer;
-	font-weight: 600;
-	font-size: 15px;
-	text-align: center;
-	overflow:hidden;
+    border-radius: 2px;
+    padding: 7px 12px;
+    width: 100%;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    overflow: hidden;
     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
 }
+
 .custom-file-input:hover::before {
-	border-color: black;
+    border-color: black;
 }
-.max-height-300{max-height:350px}
-.button{
+
+.max-height-300, .max-height-300 img {
+    max-height: 300px
+}
+
+.max-height-300 img {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
     border: 0;
     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2)
 }
-.button.button-balanced{font-weight: 600}
-.button.button-stable {background-color: #fcfcfc}
-.text-grey-muted{color:#666}
-.text-grey{color:#333}
-.mtm{margin-top: 10px}
-.mbn{margin-bottom: 0}
+
+.button.button-balanced {
+    font-weight: 600
+}
+
+.button.button-stable {
+    background-color: #fcfcfc
+}
+
+.text-grey-muted {
+    color: #666
+}
+
+.text-grey {
+    color: #333
+}
+
+.mtm {
+    margin-top: 10px
+}
+
+.mbn {
+    margin-bottom: 0
+}
+
+.mtl {
+    margin-top: 30px
+}
+
+.clearfix {
+    overflow: hidden
+}

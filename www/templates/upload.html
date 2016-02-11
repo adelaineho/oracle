@@ -6,6 +6,7 @@
         <div ng-hide="clicked">
             <form ng-hide="mostRelevant.person">
                 <div ng-hide="processing">
+                    <h4 class="text-center">We're here to help</h4>
                     <h5 class="padding-top padding-left padding-right text-center text-grey">We understand not knowing who can help you with certain jobs around the home can be stressful.</h5>
                     <h5 class="padding-top padding-left padding-right text-center text-grey">Don't worry! Take a snap and we'll identify the best trade for you.</h5>
                     <input type="file" accept="image/*" image="image" resize-max-height="500" resize-max-width="300" resize-quality="0.8" class="custom-file-input" file-model="oracleFile" />
@@ -43,7 +44,9 @@
             </div>
             <!--<a ng-click="refreshUpload()" class="calm block text-center">Back</a>-->
         </div>
-        <p class="text-center padding-top text-grey-muted">Oracle is a hipages experiment</p>
-        <p ng-show="mostRelevant.person" class="text-center padding-top"><a ng-click="refreshView();" class="calm">Start again</a></p>
+        <p ng-show="mostRelevant.person" class="text-center padding-top mtl"><a ng-click="refreshView();" class="calm">Start again</a></p>
     </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <p class="text-center padding-bottom text-grey-muted">Oracle is a hipages experiment</p>
+    </ion-footer-bar>
 </ion-view>
