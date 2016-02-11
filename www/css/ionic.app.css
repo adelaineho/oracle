@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
@@ -7001,12 +7000,6 @@ a.button {
 
 .button-bar > .button-small:before, .button-bar > .button-small .icon:before {
   line-height: 28px; }
-
-.button {
-  border: 0;
-  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2); }
-  .button.button-balanced {
-    font-weight: 600; }
 
 /**
  * Grid

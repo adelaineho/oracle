@@ -6,8 +6,8 @@
         <div ng-hide="clicked">
             <form ng-hide="mostRelevant.person">
                 <div ng-hide="processing">
-                    <h5 class="padding-top padding-left padding-right text-center">We understand not knowing who can help you with certain jobs around the home can be stressful.</h5>
-                    <h5 class="padding-top padding-left padding-right text-center">Don't worry! Take a snap and we'll identify the best trade for you.</h5>
+                    <h5 class="padding-top padding-left padding-right text-center text-grey">We understand not knowing who can help you with certain jobs around the home can be stressful.</h5>
+                    <h5 class="padding-top padding-left padding-right text-center text-grey">Don't worry! Take a snap and we'll identify the best trade for you.</h5>
                     <input type="file" accept="image/*" image="image" resize-max-height="500" resize-max-width="300" resize-quality="0.8" class="custom-file-input" file-model="oracleFile" />
                 </div>
                 <p ng-show="imageReturned" class="text-center" style="margin-top: 10px">One moment... I'm interpreting your image now.</p>
@@ -43,6 +43,6 @@
             </div>
             <!--<a ng-click="refreshUpload()" class="calm block text-center">Back</a>-->
         </div>
-        <p class="text-center padding-top calm">I'm still in beta!</p>
+        <p ng-hide="mostRelevant.person" class="text-center padding-top text-grey-muted">I'm still in <em>beta</em>!</p>
     </ion-content>
 </ion-view>
