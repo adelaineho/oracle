@@ -58,6 +58,10 @@ angular.module('oracle.controllers', [])
         $scope.callLink = function(catKey) {
             window.open('http://www.homeimprovementpages.com.au/find/'+catKey+'/get_quotes_mobile', '_system', 'location=yes'); return false;
         };
+
+        $scope.refreshView = function() {
+            $window.location.reload(true);
+        };
     })
 
     .controller('CameraCtrl', function($scope, $cordovaCapture) {
@@ -173,6 +177,10 @@ angular.module('oracle.controllers', [])
 
         $scope.callLink = function(catKey) {
             window.open('http://www.homeimprovementpages.com.au/find/'+catKey+'/get_quotes_mobile', '_blank'); return false;
+        };
+
+        $scope.refreshView = function() {
+            $window.location.reload(true);
         };
     })
 
