@@ -129,7 +129,7 @@ angular.module('oracle.controllers', [])
                 cloudSight.uploadFileToUrl(file)
                     .then(function(response){
                         var meta = response.data;
-                        //$scope.imageReturned =  meta.url;
+                        $scope.imageReturned =  meta.url;
                         $scope.selectedImageName = '';
                         $scope.progressButtonStatus = 'Interpreting...';
                         var poll = function() {
