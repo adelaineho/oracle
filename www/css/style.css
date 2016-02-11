@@ -42,3 +42,5 @@ input[type="file"].custom-file-input::before {
 .button.button-stable {background-color: #fcfcfc}
 .text-grey-muted{color:#666}
 .text-grey{color:#333}
+.mtm{margin-top: 10px}
+.mbn{margin-bottom: 0}
