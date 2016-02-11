@@ -13,7 +13,7 @@
                 </div>
                 <p ng-show="imageReturned" class="text-center text-grey mtm mbn">One moment... I'm interpreting your image now.</p>
                 <p class="text-center mbn lh_half" ng-show="processing"><ion-spinner icon="dots"></ion-spinner></p>
-                <div ng-show="imageReturned" class="col clearfix max-height-220"><img src="{{imageSrc}}" class="col" /></div>
+                <div ng-show="imageReturned" class="col clearfix max-height-240"><img src="{{imageSrc}}" class="col" /></div>
 
                 <button ng-show="processing" class="button button-block button-stable">
                     <span>{{progressButtonStatus}}</span>

@@ -77,11 +77,11 @@ input[type="file"].custom-file-input::before {
     border-color: black;
 }
 
-.max-height-220, .max-height-220 img {
-    max-height: 220px
+.max-height-240, .max-height-240 img {
+    max-height: 240px
 }
 
-.max-height-220 img {
+.max-height-240 img {
     width: auto;
     display: block;
     margin-left: auto;
