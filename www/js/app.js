@@ -48,7 +48,7 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
     }
   })
 
-  .state('tab.camera', {
+  /*.state('tab.camera', {
       url: '/camera',
       views: {
           'tab-camera': {
@@ -66,7 +66,7 @@ angular.module('oracle', ['ionic', 'ui.router', 'oracle.controllers', 'oracle.se
           controller: 'VisualCtrl'
         }
       }
-  })
+  })*/
 
   .state('tab.upload', {
       url: '/upload',

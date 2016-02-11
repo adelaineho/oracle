@@ -11,7 +11,18 @@ angular.module('oracle.controllers', [])
                     this.classList.add('hide');
                     scope.$parent.buttonStatus = "Get started";
                     scope.$parent.selectedImageName = element[0].files[0].name;
+                    var reader = new FileReader();
+                    reader.onload = function() {
+                        scope.file_contents = this.result;
+                        scope.$apply();
+                    };
+                    scope.$watch('file_contents',function(file_contents) {
+                        if (angular.isDefined(file_contents)) {
+                            scope.$parent.imageSrc = file_contents;
+                        }
+                    });
                     scope.$apply();
+                    reader.readAsDataURL(element[0].files[0]);
                     scope.$parent.sendToCloudSight(element[0].files[0]);
                 });
             }
@@ -89,7 +100,7 @@ angular.module('oracle.controllers', [])
         }, false);
     })
 
-    .controller('UploadCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService, $ionicLoading) {
+    .controller('UploadCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService) {
         document.addEventListener("deviceready", function () {
             var options = {
                 destinationType: Camera.DestinationType.FILE_URI,
@@ -118,7 +129,7 @@ angular.module('oracle.controllers', [])
                 cloudSight.uploadFileToUrl(file)
                     .then(function(response){
                         var meta = response.data;
-                        $scope.imageReturned =  meta.url;
+                        //$scope.imageReturned =  meta.url;
                         $scope.selectedImageName = '';
                         $scope.progressButtonStatus = 'Interpreting...';
                         var poll = function() {
@@ -182,14 +193,5 @@ angular.module('oracle.controllers', [])
         $scope.refreshView = function() {
             window.location.reload(true);
         };
-    })
 
-    .controller('VisualCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService) {
-
-    })
-
-    .controller('ContentController', function($scope, $ionicSideMenuDelegate) {
-        $scope.toggleRight = function() {
-            $ionicSideMenuDelegate.toggleRight();
-        };
     });
