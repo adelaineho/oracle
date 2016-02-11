@@ -11,9 +11,9 @@
                     <h5 class="padding-top padding-left padding-right text-center text-grey">Don't worry! Take a snap and we'll identify the best trade for you.</h5>
                     <input type="file" accept="image/*" image="image" resize-max-height="300" resize-max-width="300" resize-quality="0.8" class="custom-file-input" file-model="oracleFile" />
                 </div>
-                <p ng-show="imageReturned" class="text-center text-grey mtm">One moment... I'm interpreting your image now.</p>
+                <p ng-show="imageSrc" class="text-center text-grey mtm">One moment... I'm interpreting your image now.</p>
                 <p class="text-center mbn"><ion-spinner ng-show="processing" icon="dots"></ion-spinner></p>
-                <div ng-show="imageReturned" class="col clearfix max-height-300"><img src="{{imageSrc}}" class="col" /></div>
+                <div ng-show="imageSrc" class="col clearfix max-height-300"><img src="{{imageSrc}}" class="col" /></div>
 
                 <button ng-show="processing" class="button button-block button-stable">
                     <span>{{progressButtonStatus}}</span>
