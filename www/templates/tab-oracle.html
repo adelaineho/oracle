@@ -4,7 +4,7 @@
     </ion-nav-title>
     <ion-content class="padding">
         <div class="padding-horizontal">
-            <form ng-hide="clicked" name="oracle-form">
+            <form ng-hide="mostRelevant.person" name="oracle-form">
                 <div class="list list-inset">
                     <h4 class="normal">I need someone to...</h4>
                     <label class="item item-input">
@@ -40,5 +40,7 @@
             </div>
 
         </div>
+        <p class="text-center padding-top text-grey-muted">Oracle is a hipages experiment</p>
+        <p ng-show="mostRelevant.person"  class="text-center padding-top"><a href="/#/tab/oracle" class="calm">Start again</a></p>
     </ion-content>
 </ion-view>
