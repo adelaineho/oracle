@@ -1,6 +1,10 @@
 /* Empty. Add your own CSS if you like */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+body,h1,h2,h3,h4,h5,h6,p,input,button,*{font-family: 'Source Sans Pro', helvetica, arial, sans-serif}
 body,.view-container,.pane,.view,.list-inset{background-color:#eee}
-.bar {height:65px}
+.bar, .bar .title {height:65px}
+.has-header{top:65px}
 .normal{font-weight:normal}
 #job_string{font-size:1.4em}
 .logo{margin-top:5px;width: 197px;background-position: 0 0;}
@@ -10,9 +14,9 @@ input[type="file"].custom-file-input{color: transparent;width:100%;margin-bottom
 }
 input[type="file"].custom-file-input::before {
 	content: 'Upload your photo';
-	color:#333;
+	color:#fff;
 	display: block;
-	background:#fff;
+    background-color: #05c3c7;
 	border-radius: 2px;
 	padding: 7px 12px;
 	width:100%;
@@ -21,7 +25,7 @@ input[type="file"].custom-file-input::before {
 	-webkit-user-select: none;
 	cursor: pointer;
 	font-weight: 600;
-	font-size: 10pt;
+	font-size: 15px;
 	text-align: center;
 	overflow:hidden;
     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
@@ -30,3 +34,4 @@ input[type="file"].custom-file-input::before {
 	border-color: black;
 }
 .max-height-300{max-height:350}
+.button.button-stable {background-color: #fcfcfc}

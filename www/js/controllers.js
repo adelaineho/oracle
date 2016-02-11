@@ -85,7 +85,7 @@ angular.module('oracle.controllers', [])
         }, false);
     })
 
-    .controller('UploadCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService) {
+    .controller('UploadCtrl', function($scope, $stateParams, $cordovaCamera, Camera, cloudSight, $timeout, classifiedService, $ionicLoading) {
         document.addEventListener("deviceready", function () {
             var options = {
                 destinationType: Camera.DestinationType.FILE_URI,
