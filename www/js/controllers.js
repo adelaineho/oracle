@@ -33,6 +33,7 @@ angular.module('oracle.controllers', [])
         $scope.categories = null;
         $scope.mostRelevant = '';
         $scope.navTitle = '<img class="logo" src="https://assets.homeimprovementpages.com.au/images/hui/hipages-logo-simple.png" />';
+        $scope.hideInput = false;
         $scope.classify = function(str) {
             classifiedService.fetchClassified(str).then(function(response) {
                 var result = [];
@@ -46,6 +47,7 @@ angular.module('oracle.controllers', [])
                 classifiedService.getJson().then(function(response){
                     jsonObj = response.data;
                     $scope.mostRelevant = jsonObj[firstCategory];
+                    $scope.hideInput = true;
                     var catObj = {};
                     for(j=0;j<catKeys.length;j++){
                         if(typeof jsonObj[catKeys[j]] !== 'undefined'){
@@ -60,10 +62,12 @@ angular.module('oracle.controllers', [])
         $scope.showSuggestedCategories = function() {
             $scope.clicked = true;
             $scope.mostRelevant = '';
+            $scope.hideInput = true;
         };
 
         $scope.hideSuggestedCategories = function() {
             $scope.clicked = false;
+            $scope.hideInput = false;
         };
 
         $scope.callLink = function(catKey) {

@@ -3,12 +3,14 @@ angular.module('oracle.services', [])
         return {
             fetchClassified: function(str) {
                 var dataObj = {
-                    trained_model_id : 6619,
+                    //trained_model_id : 6619,  //66% accuracy classifier
+                    trained_model_id : 41041,
                     value : str
                 };
                 var req = {
                     method: 'POST',
                     url: '/service/metamind.php',
+                    //url: 'http://fe6.stg.aws.viteknologies.com.au/oracle.php',
                     withCredentials: true,
                     headers: {
                         'Authorization': "Basic 7zZmxxJNVhLH1ZeuCxu3UHwDxCAE8fQFXWyIzejwnNe9vxLLLC",
@@ -24,7 +26,8 @@ angular.module('oracle.services', [])
                     });
             },
             getJson: function() {
-                return $http.get("/js/category.json")
+                //return $http.get("/js/category.json") //66% accuracy classifier
+                return $http.get("/js/category-41041.json")
                     .error(function(data, status, headers, config) {
                         // called asynchronously if an error occurs
                         // or server returns response with an error status.
